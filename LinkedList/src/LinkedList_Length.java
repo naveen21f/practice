@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class LinkedList {
+
+public class LinkedList_Length {
 
   private static Node head;
 
@@ -27,54 +28,7 @@ public class LinkedList {
     System.out.println("Iterate Search: "+linkedList.search_iterate(find));
   }
 
-  public void insertHead(int value) {
 
-    if(head == null){
-      head = new Node(value);
-    } else {
-      Node temp = new Node(value);
-      temp.next = head;
-      head = temp;
-    }
-  }
-
-  public void insertTail(int value) {
-
-    if(head == null) {
-      head = new Node(value);
-    } else {
-      Node temp = head;
-      while(temp.next!=null) {
-        temp = temp.next;
-      }
-      temp.next = new Node(value);
-    }
-  }
-
-  public void insertAfter(int value, int pos) {
-
-    if(head != null) {
-      Node temp = head;
-      while(--pos > 0 && temp!=null){
-        temp = temp.next;
-      }
-      if(temp!=null) {
-        Node newNode = new Node(value);
-        newNode.next = temp.next;
-        temp.next = newNode;
-      }
-    }
-  }
-
-  public void diaplay(){
-    Node temp = head;
-    System.out.println("Linked List: ");
-    while(temp != null){
-      System.out.print(temp.data+" ");
-      temp = temp.next;
-    }
-    System.out.println();
-  }
 
   public int length_iterative(){
 
